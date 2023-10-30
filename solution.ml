@@ -1,15 +1,13 @@
 (* Solution 01 *)
 (* Tail of a List *)
-let rec last (li: 'a list) =
-        match li with
+let rec last = function
         | [] -> None
         | [x] -> Some x
         | _ :: tail -> last tail
 
 (* Solution 02 *)
 (* Last Two Elements of a List *)
-let rec last_two (li: 'a list) =
-        match li with
+let rec last_two = function
         | [] -> None
         | [_] -> None
         | [a; b] -> Some (a, b)
