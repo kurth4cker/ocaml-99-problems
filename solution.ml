@@ -18,3 +18,11 @@ let rec last_two = function
 let rec at k = function
         | [] -> None
         | head :: tail -> if k = 0 then Some head else at (k - 1) tail
+
+(* Solution 04 *)
+(* Length of a List *)
+let length (li: 'a list) =
+        let rec length_inner (acc: int) = function
+                | [] -> acc
+                | _ :: tail -> length_inner (acc + 1) tail
+        in length_inner 0 li
