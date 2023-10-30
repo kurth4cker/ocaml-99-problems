@@ -34,3 +34,8 @@ let rev li =
                 | [] -> result
                 | head :: tail -> rev' (head :: result) tail
         in rev' [] li
+
+(* Solution 06 *)
+(* Palindrome *)
+let is_palindrome li =
+        li = rev li
