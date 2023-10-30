@@ -26,3 +26,11 @@ let length (li: 'a list) =
                 | [] -> acc
                 | _ :: tail -> length_inner (acc + 1) tail
         in length_inner 0 li
+
+(* Solution 05 *)
+(* Reverse a List *)
+let rev li =
+        let rec rev' result = function
+                | [] -> result
+                | head :: tail -> rev' (head :: result) tail
+        in rev' [] li
